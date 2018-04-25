@@ -79,6 +79,7 @@ on late-fs
 
     setprop sys.io.scheduler "cfq"
 
+<<<<<<< HEAD
 on property:sys.post_boot.parsed=1
     # Setup permission for Power HAL
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
@@ -97,7 +98,15 @@ on property:sys.post_boot.parsed=1
     chmod 644 /sys/kernel/debug/ufshcd0/stats/query_stats
     chmod 644 /sys/kernel/debug/ufshcd0/stats/err_stats
 
+on post-fs
+    # Disable sched autogroup
+    write /proc/sys/kernel/sched_autogroup_enabled 0
+
 on property:sys.boot_completed=1
+    # Enable UFS powersaving
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
+
     # end boot time fs tune
     write /sys/block/sda/queue/iostats 1
     write /sys/block/sda/queue/nr_requests 128
