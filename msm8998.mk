@@ -24,7 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay-custom
+PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -69,14 +69,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_CONFIG := xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Additional native libraries
