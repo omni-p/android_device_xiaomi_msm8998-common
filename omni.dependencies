@@ -46,5 +46,17 @@
     "repository": "android_vendor_qcom_opensource_dpm",
     "target_path": "vendor/qcom/opensource/dpm",
     "revision": "android-9.0"
+  },
+  {
+    "remote": "github",
+    "repository": "omni-p/android_kernel_xiaomi_msm8998",
+    "target_path": "kernel/xiaomi/msm8998",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "github",
+    "repository": "omni-p/vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "revision": "android-9.0"
   }
 ]
