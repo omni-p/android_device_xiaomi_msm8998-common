@@ -6,10 +6,10 @@
     "revision": "android-9.0"
   },
   {
-    "remote": "omnirom",
-    "repository": "android_hardware_qcom_audio-caf-msm8998",
+    "remote": "github",
+    "repository": "nitrogen-project/android_hardware_qcom_audio-caf-msm8998",
     "target_path": "hardware/qcom/audio-caf-msm8998",
-    "revision": "android-9.0"
+    "revision": "p"
   },
   {
     "remote": "omnirom",
