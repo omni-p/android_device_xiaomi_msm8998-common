@@ -130,10 +130,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
-# CAF HALs
-TARGET_QCOM_AUDIO_VARIANT := caf-msm8998
-TARGET_QCOM_MEDIA_VARIANT := caf-msm8998
-TARGET_QCOM_DISPLAY_VARIANT := caf-msm8998
 
 # Camera
 USE_CAMERA_STUB := true
@@ -242,8 +238,8 @@ VENDOR_SECURITY_PATCH := 2018-07-01
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-include vendor/omni/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+#include vendor/du/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
