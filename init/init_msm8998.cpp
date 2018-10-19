@@ -35,13 +35,15 @@
 #include <android-base/strings.h>
 
 #include "property_service.h"
-#include "vendor_init.h"
+#define TARGET_INIT_VENDOR_LIB
 
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 using android::base::Trim;
 using android::init::property_set;
 
+namespace android {
+namespace init {
 static void init_alarm_boot_properties()
 {
     char const *boot_reason_file = "/proc/sys/kernel/boot_reason";
@@ -79,3 +81,5 @@ void vendor_load_properties()
 {
     init_alarm_boot_properties();
 }
+}  // namespace init
+} // namespace android
