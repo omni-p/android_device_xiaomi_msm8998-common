@@ -293,7 +293,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.spectrum.rc \
-    init.spectrum.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
