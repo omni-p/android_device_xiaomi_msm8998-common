@@ -194,8 +194,12 @@ on boot
     chmod 0660 /proc/touchpanel/reversed_keys_enable
 
     # Vibrator permissions
-    chown root system /sys/class/timed_output/vibrator/vtg_level
+    chown system system /sys/class/timed_output/vibrator/vtg_level
     chmod 0660 /sys/class/timed_output/vibrator/vtg_level
+
+    # sweep2sleep permissions
+    chown system system /sys/sweep2sleep/vib_strength
+    chown system system /sys/sweep2sleep/sweep2sleep
 
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
     # Increased technology maximums should be reflected here.
